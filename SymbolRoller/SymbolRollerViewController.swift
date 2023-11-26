@@ -15,10 +15,23 @@ class SymbolRollerViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    func reload(){
+        //TODO
+        // - 심볼에서 하나를 임의로 추출해서
+        // - 이미지와 텍스트를 설정
+        
+        let symbol = symbols.randomElement()!       // ! 이용한 unrapping
+        
+        
+        imageView.image = UIImage(systemName: symbol)
+        label.text = symbol
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(systemName: "cloud")
-        print("viewdidload")
+        
+       reload()
+        
             //스크린에 보일 때 뷰 컴포넌트 들이 메모리에 로드가 되었을 때
 
         // Do any additional setup after loading the view.
@@ -35,7 +48,7 @@ class SymbolRollerViewController: UIViewController {
     }
     // IBAction 클릭되었을때
     @IBAction func buttononclick(_ sender: Any) {
-        print("클릭")
+        reload()
     }
     
     /*
