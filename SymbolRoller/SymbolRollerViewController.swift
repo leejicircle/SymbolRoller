@@ -32,6 +32,7 @@ class SymbolRollerViewController: UIViewController {
         
        reload()
         
+        
             //스크린에 보일 때 뷰 컴포넌트 들이 메모리에 로드가 되었을 때
 
         // Do any additional setup after loading the view.
@@ -49,6 +50,7 @@ class SymbolRollerViewController: UIViewController {
     // IBAction 클릭되었을때
     @IBAction func buttononclick(_ sender: Any) {
         reload()
+        
     }
     
     /*
